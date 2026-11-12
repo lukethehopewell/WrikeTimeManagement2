@@ -17,7 +17,7 @@ echo "Updating Wrike Timesheet application in $APP_DIR..."
 cd "$APP_DIR"
 
 # Install any updated dependencies
-npm install
+npm install --legacy-peer-deps
 
 # Rebuild frontend bundles
 npm run build

@@ -73,7 +73,7 @@ fi
 
 echo -e "\n${BLUE}[4/6] Installing npm dependencies and building frontend assets...${NC}"
 cd "$APP_DIR"
-npm install
+npm install --legacy-peer-deps
 npm run build
 
 chown -R "$APP_USER":"$APP_USER" "$APP_DIR"
