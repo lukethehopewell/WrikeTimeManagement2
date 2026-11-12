@@ -1,0 +1,23 @@
+services:
+  wrike-timesheet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wrike-timesheet-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/wrike/tasks"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
