@@ -1,0 +1,6 @@
+{
+  "name": "Wrike Timesheet & Remote Work Tracker",
+  "description": "Offline-first timesheet and remote worker tracker with Wrike v4 integration, IndexedDB sync queue, audit trails, and audio shift reminders.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
